@@ -14,6 +14,8 @@ jobs:
         run: |
           yarn install
           yarn build
+        env:
+          PUBLIC_URL: "/das-beh-rdliche.de"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
