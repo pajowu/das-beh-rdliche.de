@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { searchableLocations } from '../utils/data';
 import SelectSearch, { SelectSearchOption } from 'react-select-search';
 import _ from 'lodash';

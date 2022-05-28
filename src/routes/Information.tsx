@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import Logo from '../components/Logo';
@@ -26,7 +24,7 @@ export default function Information(): JSX.Element {
   if (address == null) {
     return <></>;
   }
-  if (objects === null || objects.length == 0) {
+  if (objects === null || objects.length === 0) {
     return <></>;
   }
   return <>
