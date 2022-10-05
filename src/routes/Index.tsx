@@ -1,34 +1,34 @@
-import React from 'react';
-import './Index.css';
-import Logo from '../components/Logo';
+import React from "react";
+import "./Index.css";
+import Logo from "../components/Logo";
 // import { BigLinkButton } from './components/Buttons';
 // import { LinkFooter } from './components/LinkFooter';
 // import { get_location } from '../utils/data';
-import { SearchBar } from '../components/SearchBar';
+import { SearchBar } from "../components/SearchBar";
 
 function Index(): JSX.Element {
   return (
     <div
       style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        height: '100%',
-        alignContent: 'center',
-        flexDirection: 'column',
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "100%",
+        alignContent: "center",
+        flexDirection: "column",
       }}
     >
       <div
         style={{
-          width: '100%',
-          maxWidth: '400px',
-          padding: '2em',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100%',
-          flexDirection: 'column',
+          width: "100%",
+          maxWidth: "400px",
+          padding: "2em",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+          flexDirection: "column",
         }}
       >
         <div style={{ flexGrow: 1 }} />
@@ -43,8 +43,6 @@ function Index(): JSX.Element {
     </div>
   );
 }
-
-
 
 export default Index;
 

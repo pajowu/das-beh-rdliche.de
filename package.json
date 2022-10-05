@@ -26,7 +26,7 @@
     "css-minimizer-webpack-plugin": "^3.2.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
-    "eslint": "^8.3.0",
+    "eslint": "^8.24.0",
     "eslint-config-react-app": "^7.0.0",
     "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
@@ -81,9 +81,13 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
+    "git-info": "node scripts/gitInfo.js",
+    "prepare": "husky install",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "lint": "yarn run git-info && eslint src/",
+    "format": "prettier --write \"**/*.+(ts|tsx|json|css|md)\""
   },
   "eslintConfig": {
     "extends": [
@@ -163,5 +167,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
   }
 }

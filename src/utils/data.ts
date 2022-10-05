@@ -1,28 +1,29 @@
-import _address_list from '../data/addresses.json';
-import _object_list from '../data/objects.json';
+import _address_list from "../data/addresses.json";
+import _object_list from "../data/objects.json";
 
 export type ObjectData = {
-  "area": string, 
-  "user": string, 
-  "size": string,
-}
+  area: string;
+  user: string;
+  size: string;
+};
 
 export const addresses: Record<string, string[]> = _address_list;
 export const objects: Record<string, ObjectData> = _object_list;
 
 type SearchOption = { name: string; value: string; raw: string[] };
 
-export const searchableLocations: SearchOption[] = Object.entries(addresses).map(([key, value]) => {
+export const searchableLocations: SearchOption[] = Object.entries(
+  addresses
+).map(([key, value]) => {
   return { name: key, value: key, raw: value };
 });
 
 export function get_objects(address: string): ObjectData[] | null {
   if (addresses.hasOwnProperty(address)) {
-    return addresses[address].map(x => objects[x])
+    return addresses[address].map((x) => objects[x]);
   }
-  return null
+  return null;
 }
-
 
 // export const all: Record<string, TestData> = _all;
 // const ean_map: Record<string, string> = _ean_map;
