@@ -17,6 +17,8 @@ objects = []
 for object in reader:
     if object["user"] == 0:
         object["user"] = ""
+    if object["street"] == "-":
+        object["street"] = ""
 
     # At the start we do not have a last object, so we choose the first item and then continue with the second item
     if last_object is None:
@@ -51,7 +53,9 @@ print("Aggregating data")
 locale.setlocale(locale.LC_NUMERIC, "de_DE.UTF-8")
 
 df = pd.DataFrame(objects)
-df["address"] = df["street"] + ", " + df["postcode"] + " " + df["city"]
+df["address"] = (df["street"] + ", " + df["postcode"] + " " + df["city"]).str.strip(
+    ", "
+)
 df["size"] = df["size"].apply(locale.atof)
 df.loc[df.user == "0", "user"] = ""
 

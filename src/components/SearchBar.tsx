@@ -21,7 +21,7 @@ export function SearchBar(): JSX.Element {
         console.log("no value", value);
         return options.slice(0, 10);
       }
-      const res = fuse.search(value, { limit: 10 });
+      const res = fuse.search(value, { limit: 100 });
       return res.map((x) => x.item);
     };
   }
