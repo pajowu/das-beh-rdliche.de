@@ -1,6 +1,6 @@
 name: Build and Deploy
 on: [push]
-permissions: 
+permissions:
   contents: write
 jobs:
   build-and-deploy:
@@ -15,7 +15,7 @@ jobs:
           yarn install
           yarn build
         env:
-          PUBLIC_URL: "/das-beh-rdliche.de"
+          PUBLIC_URL: "/"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
